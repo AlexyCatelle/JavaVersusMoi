@@ -1,26 +1,31 @@
 package org.example;
 
-import org.example.exo1.Commercial;
-import org.example.exo1.Salarie;
+import org.example.exo2.CarteDeCredit;
+import org.example.exo2.Paiement;
+import org.example.exo2.PayPal;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     public static void main(String[] args) {
-        // --- Création de commerciaux ---
-        Commercial c1 = new Commercial("C001", "Ventes", "C", "Charlie", 2000., 15000, 5);
-        Commercial c2 = new Commercial("C002", "Ventes", "D", "Diane", 2200., 20000, 7);
+        System.out.println("tests reussite");
 
-        System.out.println("\n=== Affichage des Commerciaux ===");
-        c1.afficherSalaire();
-        c2.afficherSalaire();
+        Paiement paiementCarteReussite = new CarteDeCredit("1234567890123456", "Jean Dupont", "12/26", "123");
+        String resultCarteReussite = paiementCarteReussite.effectuerPaiement(150.0);
+        System.out.println(resultCarteReussite);
 
-        // --- Affichage via toString() ---
-        System.out.println("\n=== toString() ===");
-        System.out.println(c1);
-        System.out.println(c2);
+        Paiement paiementPaypalReussite = new PayPal("test@test.com", "123456");
+        String resultatPaypalReussite = paiementPaypalReussite.effectuerPaiement(75.0);
+        System.out.println(resultatPaypalReussite);
 
+        System.out.println("tests echec");
 
+        Paiement paiementCarteEchec = new CarteDeCredit("1234567890123456", "Jean Dupont", "12/26", "123");
+        String resultCarteEchec = paiementCarteEchec.effectuerPaiement(- 150.0);
+        System.out.println(resultCarteEchec);
+
+        Paiement paiementPaypalEchec = new PayPal("test@test.com", "123456");
+        String resultatPaypalEchec = paiementPaypalEchec.effectuerPaiement(0);
+        System.out.println(resultatPaypalEchec);
     }
+
 }
