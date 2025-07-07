@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EnclosDesLions implements Enclos{
-    private List<Lion> lions =new ArrayList<>();
+    private List<Lion> lions = new ArrayList<>();
 
     @Override
     public void ajouterAnimal(Animal animal) {
