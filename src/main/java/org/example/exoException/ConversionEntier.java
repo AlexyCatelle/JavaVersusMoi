@@ -8,6 +8,11 @@ import java.util.Scanner;
 // cas où la chaîne de caractères ne représente pas un entier en traitant
 // une exception appropriée.
 
+// Bonus :
+// Le programme demandera à nouveau à l'utilisateur de saisir
+// quelque chose s'il entre une valeur qui ne peut être convertie en
+// entier
+
 public class ConversionEntier {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
