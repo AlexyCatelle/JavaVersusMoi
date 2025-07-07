@@ -11,14 +11,19 @@ import java.util.Scanner;
 public class ConversionEntier {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Entrez un nombre entier :");
-        String value = scanner.nextLine();
 
+        boolean validValue = false;
+
+        while (!validValue) {
+            System.out.println("Entrez un nombre entier :");
+            String value = scanner.nextLine();
         try {
             int num = Integer.parseInt(value);
+            validValue = true;
             System.out.println("Vous avez entré :" + num);
         } catch (NumberFormatException e) {
             System.out.println("Erreur : " + value + " est invalide.");
         }
+    }
     }
 }
