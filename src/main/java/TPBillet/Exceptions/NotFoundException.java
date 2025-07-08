@@ -1,4 +1,4 @@
-package TPBillet;
+package TPBillet.Exceptions;
 
 public class NotFoundException extends Exception {
 
