@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import TPBillet.SeatType;
+
+import TPBillet.Entities.*;
+import TPBillet.Enums.SeatType;
 
 
 public class Main {
@@ -39,7 +41,7 @@ public class Main {
 //            }
 
             try {
-                Ticket ticketTest1 = new Ticket("B118",customerTest,eventTest,SeatType.VIP,217);
+                Ticket ticketTest1 = new Ticket("B118",customerTest,eventTest, SeatType.VIP,217);
                 System.out.println("Ticket réservé ");
             }catch (Exception e){
                 System.out.println("Erreur lors de la création du ticket test 1 " + e.getMessage());

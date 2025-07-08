@@ -1,4 +1,4 @@
-package TPBillet;
+package TPBillet.Enums;
 
 public enum SeatType {
     Standard,

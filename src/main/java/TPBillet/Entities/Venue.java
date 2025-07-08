@@ -1,8 +1,8 @@
-package TPBillet;
+package TPBillet.Entities;
 
 //    - Lieu (herite de adresse) :
 //        - capacité
-public class Venue extends Address{
+public class Venue extends Address {
     private int capacity;
 
     public Venue(String street, String city, int capacity) {

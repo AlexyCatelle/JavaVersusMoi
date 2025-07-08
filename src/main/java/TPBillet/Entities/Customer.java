@@ -1,4 +1,4 @@
-package TPBillet;
+package TPBillet.Entities;
 
 //   - Client :
 //     - nom

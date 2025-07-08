@@ -1,10 +1,12 @@
-package TPBillet;
+package TPBillet.Entities;
 
 //   - billet :
 //        - numeros de place
 //        - client
 //        - Evenement
 //        - type de place (standar , gold, vip)
+
+import TPBillet.Enums.SeatType;
 
 public class Ticket {
 private String seatNumber;
