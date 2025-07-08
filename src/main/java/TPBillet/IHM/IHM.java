@@ -1,7 +1,6 @@
-package TPBillet;
+package TPBillet.IHM;
 
 import TPBillet.Entities.Customer;
-import TPBillet.Entities.Ticket;
 import TPBillet.Entities.Event;
 import TPBillet.Services.EventService;
 
@@ -11,7 +10,7 @@ public class IHM {
     private List<Customer> customers = new ArrayList<>();
     private List<Event> events = new ArrayList<>();
     private EventService eventService = new EventService();
-
+    private ManageMenu manageMenu = new ManageMenu();
     private Scanner scanner = new Scanner(System.in);
 
     public void start (){
@@ -30,12 +29,12 @@ public class IHM {
                 choice = Integer.parseInt(scanner.nextLine());
 
                 switch (choice) {
-                    case 1 -> System.out.println("Option 1");
-                    case 2 -> System.out.println("Option 2");
-                    case 3 -> eventService.manageMenu();
-                    case 4 -> System.out.println("Option 4");
-                    case 5 -> System.out.println("Option 5");
-                    case 6 -> System.out.println("Option 6");
+                    case 1 -> manageMenu.callSubMenu("adresse");
+                    case 2 -> manageMenu.callSubMenu("localisation");
+                    case 3 -> manageMenu.callSubMenu("évènement");
+                    case 4 -> manageMenu.callSubMenu("client");
+                    case 5 -> manageMenu.callSubMenu("ticket");
+                    case 6 -> System.out.println("Au revoir.");
                     default -> System.out.println("Choix invalide.");
                 }
             }catch (Exception e){
