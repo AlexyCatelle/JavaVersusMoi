@@ -17,6 +17,15 @@ public class ManageMenu {
             System.out.println("5. Retour au menu principal.");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
+
+                switch (selection) {
+                    case "ticket" -> System.out.println("Ticket CRUD ICI.");
+                    case "adresse" -> System.out.println("Adresse CRUD ICI.");
+                    case "localisation" -> System.out.println("Lieux CRUD ICI.");
+                    case "client" -> System.out.println("Client CRUD ICI.");
+                    case "évènement" -> System.out.println("Event CRUD ICI.");
+                    default -> System.out.println("Erreur sur le selection.");
+                }
             }catch (Exception e){
                 System.out.println("Choix incorrect.");
             }
